@@ -5,6 +5,8 @@
 ## Question 1
 + The duty cycle calculated for the PWM so that the output is at 4.25V, with an input signal ranging between 0 and 3.3V, is 86%. Please refer to the "Calc & Simulation" folder to see the mathematical derivation and the simulation results.
 Based on the values provided in the datasheet, I have settled on using a PWM frequency of 19.61 kHz, with an 8 MHz (FOSC) internal clock
++ Please refer to main.c and the functions in it for a complete implementation of the PWM signal (I used MPLABS IDE to help generate code for this)
++ I have included a newmain.c file just to show my own implementation from the datasheet (this is only for reference and does not initalise everything like the main.c function does)
 
 ## Question 2
 + Based on the resistor divider network, the expected voltage at the AIN pin should be slightly less than 4V, taking into account the forward voltage drop across the diode. However, since the microcontroller is powered at 3.3V, the maximum VREF can be VDD. Based on this, the expected value in the ADC register should be 0x3FF.
